@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pro Meridian — Lead Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css?v=24">
+</head>
+<body>
+
+
+  <header class="topbar">
+    <div class="brand">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <polygon points="14,2 26,9 26,19 14,26 2,19 2,9" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+        <polygon points="14,7 21,11 21,17 14,21 7,17 7,11" fill="var(--accent)" opacity="0.15"/>
+        <circle cx="14" cy="14" r="3" fill="var(--accent)"/>
+      </svg>
+      <span class="brand-name">PRO MERIDIAN</span>
+      <span class="brand-sub">Lead Intelligence</span>
+    </div>
+
+    <nav class="topnav">
+      <button class="nav-btn active" data-tab="home">Home</button>
+      <button class="nav-btn" data-tab="leads">Leads</button>
+      <button class="nav-btn" data-tab="pipeline">Pipeline</button>
+      <button class="nav-btn" data-tab="scraper">Scraper</button>
+      <button class="nav-btn" data-tab="reports">Reports</button>
+      <button class="nav-btn nav-coach" data-tab="coach">Coach</button>
+    </nav>
+
+    <div class="topbar-right">
+      <div class="stat-strip">
+        <span class="sstat" id="hdr-total">-- leads</span>
+        <span class="sstat hot" id="hdr-hot">-- HOT</span>
+        <span class="sstat warm" id="hdr-warm">-- WARM</span>
+      </div>
+      <button class="run-btn" id="hdr-run-btn" onclick="quickRun()">
+        <span class="run-icon">▶</span> Run Scraper
+      </button>
+    </div>
+  </header>
+
+  <main id="view"></main>
+
+  <!-- Lead detail drawer -->
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-inner" id="drawer-inner"></div>
+  </aside>
+  <div class="drawer-backdrop" id="drawer-backdrop" onclick="closeDrawer()"></div>
+
+  <!-- Mobile bottom navigation (visible only ≤768px via CSS) -->
+  <nav class="mobile-nav" id="mobile-nav">
+    <button class="mnav-btn active" data-tab="home">
+      <span class="mnav-icon">⬡</span>
+      <span class="mnav-label">Home</span>
+    </button>
+    <button class="mnav-btn" data-tab="leads">
+      <span class="mnav-icon">≣</span>
+      <span class="mnav-label">Leads</span>
+    </button>
+    <button class="mnav-btn" data-tab="pipeline">
+      <span class="mnav-icon">⟳</span>
+      <span class="mnav-label">Pipeline</span>
+    </button>
+    <button class="mnav-btn" data-tab="scraper">
+      <span class="mnav-icon">▶</span>
+      <span class="mnav-label">Scraper</span>
+    </button>
+    <button class="mnav-btn" data-tab="reports">
+      <span class="mnav-icon">◎</span>
+      <span class="mnav-label">Reports</span>
+    </button>
+    <button class="mnav-btn mnav-coach" data-tab="coach">
+      <span class="mnav-icon">✦</span>
+      <span class="mnav-label">Coach</span>
+    </button>
+  </nav>
+
+  <!-- Deep space starfield (runs first, injects canvas behind everything) -->
+  <script src="/static/starfield.js?v=24"></script>
+  <!-- Three.js CDN (no build tools needed) -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
+  <!-- 3D sphere module -->
+  <script src="/static/sphere.js?v=24"></script>
+  <!-- Main SPA -->
+  <script src="/static/app.js?v=24"></script>
+</body>
+</html>

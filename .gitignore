@@ -1,0 +1,45 @@
+# ── Secrets — NEVER commit these ────────────────────────
+.env
+.env.*
+.env.local
+credentials.json
+*service_account*.json
+*service-account*.json
+
+# ── Coach data — contains sensitive call records ─────────
+coach_reviews.json
+coach_weekly_cache.json
+
+# ── Python ───────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# ── Logs ─────────────────────────────────────────────────
+*.log
+jarvis.log
+meridian.log
+logs/
+
+# ── Node ─────────────────────────────────────────────────
+node_modules/
+package-lock.json
+
+# ── OS ───────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ──────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
