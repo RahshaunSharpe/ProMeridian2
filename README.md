@@ -1,4 +1,6 @@
 # Pro Meridian — Lead Intelligence System
+![Badge](https://hitscounter.dev/api/hit?url=https%3A%2F%2Fgithub.com%2FRahshaunSharpe%2FProMeridian2&label=Public+Hits+&icon=github&color=%23198754&message=&style=flat&tz=UTC)
+
 
 > Automatically scrapes Google Maps for local business leads, scores them with AI, and delivers your hottest prospects straight to a dashboard — all running on your own computer.
 
